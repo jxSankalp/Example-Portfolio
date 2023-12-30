@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css');
+
+html::-webkit-scrollbar{
+    width:10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: rgb(24, 24, 24);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #cdcccc;
+    border: 5px solid transparent;  
+    border-radius: 10px;  
+}
+
+*{
+    cursor: none;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(24, 24, 24);
+    color: #cdcccc;
+    font-family: dosis;
+    letter-spacing: 0.1rem;
+    font-size: 23px;
+}
+
+.first{
+    position: sticky;
+    top: 0px;   
+} 
+
+.index{
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 20px;
+    color: #cdcccc;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 95px;
+    animation: fade-down 2s;
+}
+
+.index a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.index a:hover{
+    color: #ffffff;
+}
+
+@keyframes fade-down {
+    0%{
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+.second{
+    display: grid;
+    color: #cdcccc;
+    grid-template-rows: 90px  90px 120px 80px 80px 80px 137px  ;
+    grid-template-columns: 80px 80px 80px 80px 80px 200px 77px 300px 200px 200px ;
+    margin-left: 40px;
+}
+
+.Welcome{
+    grid-row: 3/4;
+    grid-column: 1/7;
+}
+
+.message{
+    grid-row: 4/7;
+    grid-column: 1/7;
+    font-size: 21px;
+    margin-top: 20px;
+}
+
+.animatable {
+  position: relative;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  animation:  1.5s cubic-bezier(1,-0.01,.12,.8) 0.5s 1 reveal forwards ;
+}
+
+.animatable::after {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation:  1.5s cubic-bezier(1,-0.01,.12,.8) 1.75s 1 hideBlack forwards;
+}
+
+@keyframes reveal {
+  from { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+  to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+}
+
+@keyframes hideBlack {
+  from { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  to { clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
+} 
+
+.image{
+    grid-column: 8/9;   
+    grid-row: 2/6;
+    margin-left: 170px;
+    animation: fadeIn 7s;
+}
+
+.image img{
+    border-radius: 200px;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    display: none;
+    opacity: 0.9;
+  }
+}
+
+.line{
+    background-color: #cdcccc;
+    min-width: 50vw;
+    max-height: 3px;
+    grid-row: 7/8;
+    grid-column: 1/8;
+}
+
+.three{
+    width: 95vw;
+    height: 80vh;
+    margin-left: 3vw;
+    margin-top: 45px;
+    opacity: 800;
+    display: flex;
+    column-gap: 15vw;
+}
+
+.skills{
+    min-width: 39vw;
+    margin-top: 18px;
+}
+
+.skill{
+    max-width: 35vw;
+    min-height: 15%;
+    /* border: 1px solid #3e3e3e; */
+    /* border-radius: 13px; */
+    margin: 10px;
+    margin-top: 18px;
+    padding: 7px;
+    /* background-color: #1c1b23; */
+}
+.fadein-left {
+  opacity: 0;
+  transition: all 1.5s;
+  transform: translate(-400px,0);
+}
+
+.fadein-left.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.job{
+    margin-left: 5px;
+    font-size: 1.7rem;
+}
+
+.set{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+
+.tools{
+    border: 1px solid #000;
+    border-radius: 22px;
+    padding:5px 8px ;
+    margin-top: 13px;
+    margin-bottom: 12px;
+    margin-left: 7px;
+    background-color: #2d2d2d;
+}
+
+.skill:hover{
+    transform: scale(1.08);
+}
+
+.red{
+    border-color: red;
+}
+
+.yellow{
+    border-color: yellow;
+}
+
+.blue{
+    border-color: blue;
+}
+
+.about{
+    margin-top: 30px;
+    line-height: 25px;
+    margin-right: 20px;   
+}
+
+.fourth{
+    width: 95vw;
+    height: 90vh;
+    margin-left: 3vw;
+    margin-top: 100px;
+}
+
+.project {
+    margin-top: 100px;
+    display : flex;
+    align-items : center;
+    justify-content : center;  
+    background-color: rgb(24, 24, 24);
+    min-height : 100px;
+}
+  
+.container4 {
+    position : relative;
+    width : 1100px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    flex-wrap : wrap;
+    padding : 30px;     
+}
+
+.fadein-centre {
+  opacity: 0;
+  transition: all 1.5s;
+  transform: translate(0,200px);
+}
+
+.fadein-centre.visible {
+  opacity: 1;
+  transform: translate(0,0);
+}
+  
+.container4 .card {
+    position: relative;
+    max-width : 300px;
+    height : 215px;  
+    background-color : grey;
+    margin : 30px 10px;
+    padding : 20px 15px;  
+    display : flex;
+    flex-direction : column;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+    transition : 0.3s ease-in-out;
+    border-radius : 15px;
+}
+
+.container4 .card:hover {
+    height : 370px;    
+    line-height: 30px;
+}
+   
+.container4 .card .image {
+    position : relative;
+    width : 200px;
+    height : 200px; 
+    top : -20%;
+    left: -145px;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+    z-index : 1;
+}
+  
+.container4 .card .image img {
+    max-width : 19vw;
+    border-radius : 15px;
+}
+  
+.container4 .card .content {
+    position : relative;
+    top : -50px;
+    padding : 10px 15px;
+    color : #111;
+    text-align : center;
+    visibility : hidden;
+    opacity : 0;
+    transition : 0.3s ease-in-out;
+}
+  
+.container4 .card:hover .content {
+    margin-top : 35px;
+    visibility : visible;
+    opacity : 1;
+    transition-delay: 0.2s;
+}
+
+.fifth{
+    width: 95vw;
+    height: 90vh;
+    margin-left: 3vw;
+    font-size: 28px;
+    margin-top: 40px;
+    text-align: center;
+    display: block;
+}
+
+.fifth a{
+    font-family: MontSerrat,Tahoma,Arial,sans-serif;
+    text-decoration: none;
+    color: inherit;
+    line-height: 24px;
+}
+
+.contact{
+    width: 95vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(5,220px);
+    grid-template-rows: repeat(5,80px);
+}
+
+.name{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-size: 20px;
+    text-align: start;
+}
+
+input[type=text] , input[type=email] {
+    margin-top: 5px;
+    border: 2px solid rgb(24, 24, 24);
+    border-bottom: 2px solid #cdcccc;
+    min-height: 30px;
+    min-width: 250px;
+    background-color: rgb(24, 24, 24);
+    color: inherit;
+}
+
+.email{
+    grid-row: 2/3;
+    grid-column: 3/4;
+    font-size: 20px;
+    text-align: start;
+    margin-left: 80px;
+}
+
+.mess{
+    grid-row: 3/5;
+    grid-column: 2/4;
+    font-size: 20px;
+    text-align: start;
+}
+
+textarea{
+    margin-top: 10px;
+    border: 2px solid #181818;
+    border-bottom: 2px solid #cdcccc;
+    padding-top: 5px;
+    max-height: 30px;
+    min-width: 350px;
+    background-color: rgb(24, 24, 24);
+    color: inherit;
+}
+
+.button{
+    grid-row: 5/6;
+    grid-column: 2/3;
+    font-size: 20px;
+    text-align: start;
+    margin-top: 60px;
+}
+
+.button button{
+    min-width: 105px;
+    min-height: 30px;
+    border-radius: 13px;
+    background-color: rgb(0, 150, 136);
+}
+
+.icons{
+    grid-row: 2/5;
+    grid-column: 5/6;   
+}
+
+.icon{
+    margin-top: -74px;
+    min-height: 20px;
+    width: 50px;
+    margin: 20px;
+    margin-bottom: 55px;
+    transition: margin-left 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.icon:hover{
+    margin-left: 33px;
+    transform: scale(1.2);
+}
+
+.cursor {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid #cdcccc;
+    transition: all 100ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    z-index: 99;
+}
+  
+.cursor2 {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #cdcccc;
+    opacity: .7;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width .3s, height .3s, opacity .3s;
+    z-index: 100;
+}
+  
+.cursorinnerhover {
+    width: 50px;
+    height: 50px;
+    opacity: .7;
+}
